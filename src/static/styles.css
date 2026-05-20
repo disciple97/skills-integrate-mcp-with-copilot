@@ -16,12 +16,51 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+.auth-widget {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.icon-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  padding: 0;
+}
+
+.auth-panel {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 280px;
+  background: #ffffff;
+  color: #333;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  text-align: left;
+  z-index: 30;
+}
+
+.auth-panel h4 {
+  margin-bottom: 10px;
+  color: #1a237e;
+}
+
+.auth-status {
+  margin: 10px 0;
+  font-size: 14px;
 }
 
 header h1 {
@@ -125,6 +164,10 @@ section h3 {
   background-color: #ffebee;
 }
 
+.delete-btn.hidden {
+  display: none;
+}
+
 .participants-section p {
   color: #777;
   font-style: italic;
@@ -190,6 +233,23 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+#signup-container.readonly {
+  opacity: 0.65;
+}
+
+#signup-container.readonly button,
+#signup-container.readonly input,
+#signup-container.readonly select {
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .auth-panel {
+    right: -6px;
+    width: min(92vw, 300px);
+  }
 }
 
 footer {
