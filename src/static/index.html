@@ -8,6 +8,25 @@
   </head>
   <body>
     <header>
+      <div class="auth-widget">
+        <button id="auth-toggle" class="icon-button" aria-label="Teacher login menu">👤</button>
+        <div id="auth-panel" class="auth-panel hidden">
+          <h4>Teacher Access</h4>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="teacher-username">Username:</label>
+              <input type="text" id="teacher-username" required />
+            </div>
+            <div class="form-group">
+              <label for="teacher-password">Password:</label>
+              <input type="password" id="teacher-password" required />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          <p id="teacher-status" class="auth-status">Not logged in</p>
+          <button id="logout-btn" class="hidden">Logout</button>
+        </div>
+      </div>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
     </header>
@@ -22,7 +41,7 @@
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+        <h3>Teacher Registration Controls</h3>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
